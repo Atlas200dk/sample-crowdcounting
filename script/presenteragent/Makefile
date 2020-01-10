@@ -47,8 +47,8 @@ ALL_OBJS := $(OBJS) \
 CC_FLAGS := $(INC_DIR) -std=c++11 -Wall -fPIC -O2
 
 LNK_FLAGS := \
-	-Wl,-rpath-link=$(NPU_DEVICE_LIB) \
-	-L$(NPU_DEVICE_LIB) \
+	-Wl,-rpath-link=$(DDK_HOME)/host/lib/ \
+	-L$(DDK_HOME)/host/lib \
 	-lhiai_common \
 	-lprotobuf \
 	-shared

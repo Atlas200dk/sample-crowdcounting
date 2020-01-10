@@ -6,55 +6,69 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
+#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
+// This is a temporary google only hack
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+#include "third_party/protobuf/version.h"
+#endif
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
-
-extern PROTOBUF_INTERNAL_EXPORT_presenter_5fmessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Coordinate_presenter_5fmessage_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_presenter_5fmessage_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Rectangle_Attr_presenter_5fmessage_2eproto;
 namespace ascend {
 namespace presenter {
 namespace proto {
 class OpenChannelRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OpenChannelRequest> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<OpenChannelRequest>
+      _instance;
 } _OpenChannelRequest_default_instance_;
 class OpenChannelResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OpenChannelResponse> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<OpenChannelResponse>
+      _instance;
 } _OpenChannelResponse_default_instance_;
 class HeartbeatMessageDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<HeartbeatMessage> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<HeartbeatMessage>
+      _instance;
 } _HeartbeatMessage_default_instance_;
 class CoordinateDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Coordinate> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<Coordinate>
+      _instance;
 } _Coordinate_default_instance_;
 class Rectangle_AttrDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Rectangle_Attr> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<Rectangle_Attr>
+      _instance;
 } _Rectangle_Attr_default_instance_;
 class PresentImageRequestDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PresentImageRequest> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<PresentImageRequest>
+      _instance;
 } _PresentImageRequest_default_instance_;
 class PresentImageResponseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PresentImageResponse> _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<PresentImageResponse>
+      _instance;
 } _PresentImageResponse_default_instance_;
 }  // namespace proto
 }  // namespace presenter
 }  // namespace ascend
-static void InitDefaultsOpenChannelRequest_presenter_5fmessage_2eproto() {
+namespace protobuf_presenter_5fmessage_2eproto {
+void InitDefaultsOpenChannelRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::proto::_OpenChannelRequest_default_instance_;
     new (ptr) ::ascend::presenter::proto::OpenChannelRequest();
@@ -63,12 +77,19 @@ static void InitDefaultsOpenChannelRequest_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::OpenChannelRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_OpenChannelRequest_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOpenChannelRequest_presenter_5fmessage_2eproto}, {}};
+void InitDefaultsOpenChannelRequest() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsOpenChannelRequestImpl);
+}
 
-static void InitDefaultsOpenChannelResponse_presenter_5fmessage_2eproto() {
+void InitDefaultsOpenChannelResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::proto::_OpenChannelResponse_default_instance_;
     new (ptr) ::ascend::presenter::proto::OpenChannelResponse();
@@ -77,12 +98,19 @@ static void InitDefaultsOpenChannelResponse_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::OpenChannelResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_OpenChannelResponse_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOpenChannelResponse_presenter_5fmessage_2eproto}, {}};
+void InitDefaultsOpenChannelResponse() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsOpenChannelResponseImpl);
+}
 
-static void InitDefaultsHeartbeatMessage_presenter_5fmessage_2eproto() {
+void InitDefaultsHeartbeatMessageImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::proto::_HeartbeatMessage_default_instance_;
     new (ptr) ::ascend::presenter::proto::HeartbeatMessage();
@@ -91,12 +119,19 @@ static void InitDefaultsHeartbeatMessage_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::HeartbeatMessage::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_HeartbeatMessage_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsHeartbeatMessage_presenter_5fmessage_2eproto}, {}};
+void InitDefaultsHeartbeatMessage() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsHeartbeatMessageImpl);
+}
 
-static void InitDefaultsCoordinate_presenter_5fmessage_2eproto() {
+void InitDefaultsCoordinateImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::proto::_Coordinate_default_instance_;
     new (ptr) ::ascend::presenter::proto::Coordinate();
@@ -105,12 +140,20 @@ static void InitDefaultsCoordinate_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::Coordinate::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_Coordinate_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCoordinate_presenter_5fmessage_2eproto}, {}};
+void InitDefaultsCoordinate() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsCoordinateImpl);
+}
 
-static void InitDefaultsRectangle_Attr_presenter_5fmessage_2eproto() {
+void InitDefaultsRectangle_AttrImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_presenter_5fmessage_2eproto::InitDefaultsCoordinate();
   {
     void* ptr = &::ascend::presenter::proto::_Rectangle_Attr_default_instance_;
     new (ptr) ::ascend::presenter::proto::Rectangle_Attr();
@@ -119,13 +162,20 @@ static void InitDefaultsRectangle_Attr_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::Rectangle_Attr::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_Rectangle_Attr_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsRectangle_Attr_presenter_5fmessage_2eproto}, {
-      &scc_info_Coordinate_presenter_5fmessage_2eproto.base,}};
+void InitDefaultsRectangle_Attr() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRectangle_AttrImpl);
+}
 
-static void InitDefaultsPresentImageRequest_presenter_5fmessage_2eproto() {
+void InitDefaultsPresentImageRequestImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  protobuf_presenter_5fmessage_2eproto::InitDefaultsRectangle_Attr();
   {
     void* ptr = &::ascend::presenter::proto::_PresentImageRequest_default_instance_;
     new (ptr) ::ascend::presenter::proto::PresentImageRequest();
@@ -134,13 +184,19 @@ static void InitDefaultsPresentImageRequest_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::PresentImageRequest::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_PresentImageRequest_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsPresentImageRequest_presenter_5fmessage_2eproto}, {
-      &scc_info_Rectangle_Attr_presenter_5fmessage_2eproto.base,}};
+void InitDefaultsPresentImageRequest() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPresentImageRequestImpl);
+}
 
-static void InitDefaultsPresentImageResponse_presenter_5fmessage_2eproto() {
+void InitDefaultsPresentImageResponseImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
+#else
+  ::google::protobuf::internal::InitProtobufDefaults();
+#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::ascend::presenter::proto::_PresentImageResponse_default_instance_;
     new (ptr) ::ascend::presenter::proto::PresentImageResponse();
@@ -149,77 +205,68 @@ static void InitDefaultsPresentImageResponse_presenter_5fmessage_2eproto() {
   ::ascend::presenter::proto::PresentImageResponse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_PresentImageResponse_presenter_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsPresentImageResponse_presenter_5fmessage_2eproto}, {}};
-
-void InitDefaults_presenter_5fmessage_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_OpenChannelRequest_presenter_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OpenChannelResponse_presenter_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_HeartbeatMessage_presenter_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Coordinate_presenter_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Rectangle_Attr_presenter_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_PresentImageRequest_presenter_5fmessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_PresentImageResponse_presenter_5fmessage_2eproto.base);
+void InitDefaultsPresentImageResponse() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPresentImageResponseImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata_presenter_5fmessage_2eproto[7];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_presenter_5fmessage_2eproto[4];
-constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_presenter_5fmessage_2eproto = nullptr;
+::google::protobuf::Metadata file_level_metadata[7];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
-const ::google::protobuf::uint32 TableStruct_presenter_5fmessage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelRequest, channel_name_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelRequest, content_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelRequest, channel_name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelRequest, content_type_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelResponse, error_code_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelResponse, error_message_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelResponse, error_code_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::OpenChannelResponse, error_message_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::HeartbeatMessage, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::HeartbeatMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Coordinate, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Coordinate, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Coordinate, x_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Coordinate, y_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Coordinate, x_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Coordinate, y_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, left_top_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, right_bottom_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, label_text_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, left_top_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, right_bottom_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::Rectangle_Attr, label_text_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, format_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, width_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, height_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, data_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, rectangle_list_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, format_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, width_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, height_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, data_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageRequest, rectangle_list_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageResponse, error_code_),
-  PROTOBUF_FIELD_OFFSET(::ascend::presenter::proto::PresentImageResponse, error_message_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageResponse, error_code_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::ascend::presenter::proto::PresentImageResponse, error_message_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::ascend::presenter::proto::OpenChannelRequest)},
   { 7, -1, sizeof(::ascend::presenter::proto::OpenChannelResponse)},
   { 14, -1, sizeof(::ascend::presenter::proto::HeartbeatMessage)},
@@ -239,66 +286,83 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::ascend::presenter::proto::_PresentImageResponse_default_instance_),
 };
 
-::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_presenter_5fmessage_2eproto = {
-  {}, AddDescriptors_presenter_5fmessage_2eproto, "presenter_message.proto", schemas,
-  file_default_instances, TableStruct_presenter_5fmessage_2eproto::offsets,
-  file_level_metadata_presenter_5fmessage_2eproto, 7, file_level_enum_descriptors_presenter_5fmessage_2eproto, file_level_service_descriptors_presenter_5fmessage_2eproto,
-};
-
-const char descriptor_table_protodef_presenter_5fmessage_2eproto[] =
-  "\n\027presenter_message.proto\022\026ascend.presen"
-  "ter.proto\"l\n\022OpenChannelRequest\022\024\n\014chann"
-  "el_name\030\001 \001(\t\022@\n\014content_type\030\002 \001(\0162*.as"
-  "cend.presenter.proto.ChannelContentType\""
-  "n\n\023OpenChannelResponse\022@\n\nerror_code\030\001 \001"
-  "(\0162,.ascend.presenter.proto.OpenChannelE"
-  "rrorCode\022\025\n\rerror_message\030\002 \001(\t\"\022\n\020Heart"
-  "beatMessage\"\"\n\nCoordinate\022\t\n\001x\030\001 \001(\r\022\t\n\001"
-  "y\030\002 \001(\r\"\224\001\n\016Rectangle_Attr\0224\n\010left_top\030\001"
-  " \001(\0132\".ascend.presenter.proto.Coordinate"
-  "\0228\n\014right_bottom\030\002 \001(\0132\".ascend.presente"
-  "r.proto.Coordinate\022\022\n\nlabel_text\030\003 \001(\t\"\267"
-  "\001\n\023PresentImageRequest\0223\n\006format\030\001 \001(\0162#"
-  ".ascend.presenter.proto.ImageFormat\022\r\n\005w"
-  "idth\030\002 \001(\r\022\016\n\006height\030\003 \001(\r\022\014\n\004data\030\004 \001(\014"
-  "\022>\n\016rectangle_list\030\005 \003(\0132&.ascend.presen"
-  "ter.proto.Rectangle_Attr\"o\n\024PresentImage"
-  "Response\022@\n\nerror_code\030\001 \001(\0162,.ascend.pr"
-  "esenter.proto.PresentDataErrorCode\022\025\n\rer"
-  "ror_message\030\002 \001(\t*\245\001\n\024OpenChannelErrorCo"
-  "de\022\031\n\025kOpenChannelErrorNone\020\000\022\"\n\036kOpenCh"
-  "annelErrorNoSuchChannel\020\001\022)\n%kOpenChanne"
-  "lErrorChannelAlreadyOpened\020\002\022#\n\026kOpenCha"
-  "nnelErrorOther\020\377\377\377\377\377\377\377\377\377\001*P\n\022ChannelCont"
-  "entType\022\034\n\030kChannelContentTypeImage\020\000\022\034\n"
-  "\030kChannelContentTypeVideo\020\001*#\n\013ImageForm"
-  "at\022\024\n\020kImageFormatJpeg\020\000*\244\001\n\024PresentData"
-  "ErrorCode\022\031\n\025kPresentDataErrorNone\020\000\022$\n "
-  "kPresentDataErrorUnsupportedType\020\001\022&\n\"kP"
-  "resentDataErrorUnsupportedFormat\020\002\022#\n\026kP"
-  "resentDataErrorOther\020\377\377\377\377\377\377\377\377\377\001b\006proto3"
-  ;
-::google::protobuf::internal::DescriptorTable descriptor_table_presenter_5fmessage_2eproto = {
-  false, InitDefaults_presenter_5fmessage_2eproto, 
-  descriptor_table_protodef_presenter_5fmessage_2eproto,
-  "presenter_message.proto", &assign_descriptors_table_presenter_5fmessage_2eproto, 1239,
-};
-
-void AddDescriptors_presenter_5fmessage_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
-  {
-  };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_presenter_5fmessage_2eproto, deps, 0);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "presenter_message.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
-// Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_presenter_5fmessage_2eproto = []() { AddDescriptors_presenter_5fmessage_2eproto(); return true; }();
+void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
+void protobuf_RegisterTypes(const ::std::string&) {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 7);
+}
+
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n\027presenter_message.proto\022\026ascend.presen"
+      "ter.proto\"l\n\022OpenChannelRequest\022\024\n\014chann"
+      "el_name\030\001 \001(\t\022@\n\014content_type\030\002 \001(\0162*.as"
+      "cend.presenter.proto.ChannelContentType\""
+      "n\n\023OpenChannelResponse\022@\n\nerror_code\030\001 \001"
+      "(\0162,.ascend.presenter.proto.OpenChannelE"
+      "rrorCode\022\025\n\rerror_message\030\002 \001(\t\"\022\n\020Heart"
+      "beatMessage\"\"\n\nCoordinate\022\t\n\001x\030\001 \001(\r\022\t\n\001"
+      "y\030\002 \001(\r\"\224\001\n\016Rectangle_Attr\0224\n\010left_top\030\001"
+      " \001(\0132\".ascend.presenter.proto.Coordinate"
+      "\0228\n\014right_bottom\030\002 \001(\0132\".ascend.presente"
+      "r.proto.Coordinate\022\022\n\nlabel_text\030\003 \001(\t\"\267"
+      "\001\n\023PresentImageRequest\0223\n\006format\030\001 \001(\0162#"
+      ".ascend.presenter.proto.ImageFormat\022\r\n\005w"
+      "idth\030\002 \001(\r\022\016\n\006height\030\003 \001(\r\022\014\n\004data\030\004 \001(\014"
+      "\022>\n\016rectangle_list\030\005 \003(\0132&.ascend.presen"
+      "ter.proto.Rectangle_Attr\"o\n\024PresentImage"
+      "Response\022@\n\nerror_code\030\001 \001(\0162,.ascend.pr"
+      "esenter.proto.PresentDataErrorCode\022\025\n\rer"
+      "ror_message\030\002 \001(\t*\245\001\n\024OpenChannelErrorCo"
+      "de\022\031\n\025kOpenChannelErrorNone\020\000\022\"\n\036kOpenCh"
+      "annelErrorNoSuchChannel\020\001\022)\n%kOpenChanne"
+      "lErrorChannelAlreadyOpened\020\002\022#\n\026kOpenCha"
+      "nnelErrorOther\020\377\377\377\377\377\377\377\377\377\001*P\n\022ChannelCont"
+      "entType\022\034\n\030kChannelContentTypeImage\020\000\022\034\n"
+      "\030kChannelContentTypeVideo\020\001*#\n\013ImageForm"
+      "at\022\024\n\020kImageFormatJpeg\020\000*\244\001\n\024PresentData"
+      "ErrorCode\022\031\n\025kPresentDataErrorNone\020\000\022$\n "
+      "kPresentDataErrorUnsupportedType\020\001\022&\n\"kP"
+      "resentDataErrorUnsupportedFormat\020\002\022#\n\026kP"
+      "resentDataErrorOther\020\377\377\377\377\377\377\377\377\377\001b\006proto3"
+  };
+  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+      descriptor, 1239);
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+    "presenter_message.proto", &protobuf_RegisterTypes);
+}
+
+void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
+  }
+} static_descriptor_initializer;
+}  // namespace protobuf_presenter_5fmessage_2eproto
 namespace ascend {
 namespace presenter {
 namespace proto {
 const ::google::protobuf::EnumDescriptor* OpenChannelErrorCode_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_presenter_5fmessage_2eproto);
-  return file_level_enum_descriptors_presenter_5fmessage_2eproto[0];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_presenter_5fmessage_2eproto::file_level_enum_descriptors[0];
 }
 bool OpenChannelErrorCode_IsValid(int value) {
   switch (value) {
@@ -313,8 +377,8 @@ bool OpenChannelErrorCode_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* ChannelContentType_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_presenter_5fmessage_2eproto);
-  return file_level_enum_descriptors_presenter_5fmessage_2eproto[1];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_presenter_5fmessage_2eproto::file_level_enum_descriptors[1];
 }
 bool ChannelContentType_IsValid(int value) {
   switch (value) {
@@ -327,8 +391,8 @@ bool ChannelContentType_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* ImageFormat_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_presenter_5fmessage_2eproto);
-  return file_level_enum_descriptors_presenter_5fmessage_2eproto[2];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_presenter_5fmessage_2eproto::file_level_enum_descriptors[2];
 }
 bool ImageFormat_IsValid(int value) {
   switch (value) {
@@ -340,8 +404,8 @@ bool ImageFormat_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* PresentDataErrorCode_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_presenter_5fmessage_2eproto);
-  return file_level_enum_descriptors_presenter_5fmessage_2eproto[3];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_presenter_5fmessage_2eproto::file_level_enum_descriptors[3];
 }
 bool PresentDataErrorCode_IsValid(int value) {
   switch (value) {
@@ -360,23 +424,23 @@ bool PresentDataErrorCode_IsValid(int value) {
 
 void OpenChannelRequest::InitAsDefaultInstance() {
 }
-class OpenChannelRequest::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int OpenChannelRequest::kChannelNameFieldNumber;
 const int OpenChannelRequest::kContentTypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OpenChannelRequest::OpenChannelRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsOpenChannelRequest();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.OpenChannelRequest)
 }
 OpenChannelRequest::OpenChannelRequest(const OpenChannelRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   channel_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.channel_name().size() > 0) {
@@ -387,10 +451,9 @@ OpenChannelRequest::OpenChannelRequest(const OpenChannelRequest& from)
 }
 
 void OpenChannelRequest::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_OpenChannelRequest_presenter_5fmessage_2eproto.base);
   channel_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   content_type_ = 0;
+  _cached_size_ = 0;
 }
 
 OpenChannelRequest::~OpenChannelRequest() {
@@ -403,13 +466,27 @@ void OpenChannelRequest::SharedDtor() {
 }
 
 void OpenChannelRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* OpenChannelRequest::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const OpenChannelRequest& OpenChannelRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_OpenChannelRequest_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsOpenChannelRequest();
   return *internal_default_instance();
 }
 
+OpenChannelRequest* OpenChannelRequest::New(::google::protobuf::Arena* arena) const {
+  OpenChannelRequest* n = new OpenChannelRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void OpenChannelRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.OpenChannelRequest)
@@ -422,80 +499,20 @@ void OpenChannelRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* OpenChannelRequest::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<OpenChannelRequest*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // string channel_name = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.proto.OpenChannelRequest.channel_name");
-        object = msg->mutable_channel_name();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // .ascend.presenter.proto.ChannelContentType content_type = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_content_type(static_cast<::ascend::presenter::proto::ChannelContentType>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool OpenChannelRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.OpenChannelRequest)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string channel_name = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_channel_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -510,8 +527,9 @@ bool OpenChannelRequest::MergePartialFromCodedStream(
 
       // .ascend.presenter.proto.ChannelContentType content_type = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
-          int value = 0;
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -541,7 +559,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void OpenChannelRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -565,15 +582,16 @@ void OpenChannelRequest::SerializeWithCachedSizes(
       2, this->content_type(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.OpenChannelRequest)
 }
 
 ::google::protobuf::uint8* OpenChannelRequest::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.OpenChannelRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -595,9 +613,9 @@ void OpenChannelRequest::SerializeWithCachedSizes(
       2, this->content_type(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.OpenChannelRequest)
   return target;
@@ -607,15 +625,11 @@ size_t OpenChannelRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.OpenChannelRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string channel_name = 1;
   if (this->channel_name().size() > 0) {
     total_size += 1 +
@@ -630,7 +644,9 @@ size_t OpenChannelRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -638,9 +654,9 @@ void OpenChannelRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.OpenChannelRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const OpenChannelRequest* source =
-      ::google::protobuf::DynamicCastToGenerated<OpenChannelRequest>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const OpenChannelRequest>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.OpenChannelRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -689,15 +705,15 @@ void OpenChannelRequest::Swap(OpenChannelRequest* other) {
 }
 void OpenChannelRequest::InternalSwap(OpenChannelRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  channel_name_.Swap(&other->channel_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  channel_name_.Swap(&other->channel_name_);
   swap(content_type_, other->content_type_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata OpenChannelRequest::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -705,23 +721,23 @@ void OpenChannelRequest::InternalSwap(OpenChannelRequest* other) {
 
 void OpenChannelResponse::InitAsDefaultInstance() {
 }
-class OpenChannelResponse::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int OpenChannelResponse::kErrorCodeFieldNumber;
 const int OpenChannelResponse::kErrorMessageFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OpenChannelResponse::OpenChannelResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsOpenChannelResponse();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.OpenChannelResponse)
 }
 OpenChannelResponse::OpenChannelResponse(const OpenChannelResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   error_message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.error_message().size() > 0) {
@@ -732,10 +748,9 @@ OpenChannelResponse::OpenChannelResponse(const OpenChannelResponse& from)
 }
 
 void OpenChannelResponse::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_OpenChannelResponse_presenter_5fmessage_2eproto.base);
   error_message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   error_code_ = 0;
+  _cached_size_ = 0;
 }
 
 OpenChannelResponse::~OpenChannelResponse() {
@@ -748,13 +763,27 @@ void OpenChannelResponse::SharedDtor() {
 }
 
 void OpenChannelResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* OpenChannelResponse::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const OpenChannelResponse& OpenChannelResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_OpenChannelResponse_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsOpenChannelResponse();
   return *internal_default_instance();
 }
 
+OpenChannelResponse* OpenChannelResponse::New(::google::protobuf::Arena* arena) const {
+  OpenChannelResponse* n = new OpenChannelResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void OpenChannelResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.OpenChannelResponse)
@@ -767,81 +796,21 @@ void OpenChannelResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* OpenChannelResponse::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<OpenChannelResponse*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .ascend.presenter.proto.OpenChannelErrorCode error_code = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_error_code(static_cast<::ascend::presenter::proto::OpenChannelErrorCode>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string error_message = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.proto.OpenChannelResponse.error_message");
-        object = msg->mutable_error_message();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool OpenChannelResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.OpenChannelResponse)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ascend.presenter.proto.OpenChannelErrorCode error_code = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -854,7 +823,8 @@ bool OpenChannelResponse::MergePartialFromCodedStream(
 
       // string error_message = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_error_message()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -886,7 +856,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void OpenChannelResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -910,15 +879,16 @@ void OpenChannelResponse::SerializeWithCachedSizes(
       2, this->error_message(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.OpenChannelResponse)
 }
 
 ::google::protobuf::uint8* OpenChannelResponse::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.OpenChannelResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -940,9 +910,9 @@ void OpenChannelResponse::SerializeWithCachedSizes(
         2, this->error_message(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.OpenChannelResponse)
   return target;
@@ -952,15 +922,11 @@ size_t OpenChannelResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.OpenChannelResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string error_message = 2;
   if (this->error_message().size() > 0) {
     total_size += 1 +
@@ -975,7 +941,9 @@ size_t OpenChannelResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -983,9 +951,9 @@ void OpenChannelResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.OpenChannelResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const OpenChannelResponse* source =
-      ::google::protobuf::DynamicCastToGenerated<OpenChannelResponse>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const OpenChannelResponse>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.OpenChannelResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1034,15 +1002,15 @@ void OpenChannelResponse::Swap(OpenChannelResponse* other) {
 }
 void OpenChannelResponse::InternalSwap(OpenChannelResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  error_message_.Swap(&other->error_message_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  error_message_.Swap(&other->error_message_);
   swap(error_code_, other->error_code_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata OpenChannelResponse::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1050,26 +1018,27 @@ void OpenChannelResponse::InternalSwap(OpenChannelResponse* other) {
 
 void HeartbeatMessage::InitAsDefaultInstance() {
 }
-class HeartbeatMessage::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 HeartbeatMessage::HeartbeatMessage()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsHeartbeatMessage();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.HeartbeatMessage)
 }
 HeartbeatMessage::HeartbeatMessage(const HeartbeatMessage& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:ascend.presenter.proto.HeartbeatMessage)
 }
 
 void HeartbeatMessage::SharedCtor() {
+  _cached_size_ = 0;
 }
 
 HeartbeatMessage::~HeartbeatMessage() {
@@ -1081,13 +1050,27 @@ void HeartbeatMessage::SharedDtor() {
 }
 
 void HeartbeatMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* HeartbeatMessage::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const HeartbeatMessage& HeartbeatMessage::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_HeartbeatMessage_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsHeartbeatMessage();
   return *internal_default_instance();
 }
 
+HeartbeatMessage* HeartbeatMessage::New(::google::protobuf::Arena* arena) const {
+  HeartbeatMessage* n = new HeartbeatMessage;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void HeartbeatMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.HeartbeatMessage)
@@ -1098,42 +1081,13 @@ void HeartbeatMessage::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* HeartbeatMessage::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<HeartbeatMessage*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      default: {
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool HeartbeatMessage::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.HeartbeatMessage)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -1151,7 +1105,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void HeartbeatMessage::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1159,22 +1112,23 @@ void HeartbeatMessage::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.HeartbeatMessage)
 }
 
 ::google::protobuf::uint8* HeartbeatMessage::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.HeartbeatMessage)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.HeartbeatMessage)
   return target;
@@ -1184,17 +1138,15 @@ size_t HeartbeatMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.HeartbeatMessage)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -1202,9 +1154,9 @@ void HeartbeatMessage::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.HeartbeatMessage)
   GOOGLE_DCHECK_NE(&from, this);
   const HeartbeatMessage* source =
-      ::google::protobuf::DynamicCastToGenerated<HeartbeatMessage>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const HeartbeatMessage>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.HeartbeatMessage)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1247,11 +1199,12 @@ void HeartbeatMessage::Swap(HeartbeatMessage* other) {
 void HeartbeatMessage::InternalSwap(HeartbeatMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata HeartbeatMessage::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1259,23 +1212,23 @@ void HeartbeatMessage::InternalSwap(HeartbeatMessage* other) {
 
 void Coordinate::InitAsDefaultInstance() {
 }
-class Coordinate::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Coordinate::kXFieldNumber;
 const int Coordinate::kYFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Coordinate::Coordinate()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsCoordinate();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.Coordinate)
 }
 Coordinate::Coordinate(const Coordinate& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&x_, &from.x_,
     static_cast<size_t>(reinterpret_cast<char*>(&y_) -
@@ -1287,6 +1240,7 @@ void Coordinate::SharedCtor() {
   ::memset(&x_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&y_) -
       reinterpret_cast<char*>(&x_)) + sizeof(y_));
+  _cached_size_ = 0;
 }
 
 Coordinate::~Coordinate() {
@@ -1298,13 +1252,27 @@ void Coordinate::SharedDtor() {
 }
 
 void Coordinate::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* Coordinate::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const Coordinate& Coordinate::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Coordinate_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsCoordinate();
   return *internal_default_instance();
 }
 
+Coordinate* Coordinate::New(::google::protobuf::Arena* arena) const {
+  Coordinate* n = new Coordinate;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void Coordinate::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.Coordinate)
@@ -1318,63 +1286,20 @@ void Coordinate::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Coordinate::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Coordinate*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // uint32 x = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        msg->set_x(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 y = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
-        msg->set_y(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool Coordinate::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.Coordinate)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint32 x = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1387,7 +1312,8 @@ bool Coordinate::MergePartialFromCodedStream(
 
       // uint32 y = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1417,7 +1343,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void Coordinate::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1435,15 +1360,16 @@ void Coordinate::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->y(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.Coordinate)
 }
 
 ::google::protobuf::uint8* Coordinate::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.Coordinate)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1458,9 +1384,9 @@ void Coordinate::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->y(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.Coordinate)
   return target;
@@ -1470,15 +1396,11 @@ size_t Coordinate::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.Coordinate)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // uint32 x = 1;
   if (this->x() != 0) {
     total_size += 1 +
@@ -1494,7 +1416,9 @@ size_t Coordinate::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -1502,9 +1426,9 @@ void Coordinate::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.Coordinate)
   GOOGLE_DCHECK_NE(&from, this);
   const Coordinate* source =
-      ::google::protobuf::DynamicCastToGenerated<Coordinate>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const Coordinate>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.Coordinate)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1552,14 +1476,15 @@ void Coordinate::Swap(Coordinate* other) {
 }
 void Coordinate::InternalSwap(Coordinate* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(x_, other->x_);
   swap(y_, other->y_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Coordinate::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1571,20 +1496,6 @@ void Rectangle_Attr::InitAsDefaultInstance() {
   ::ascend::presenter::proto::_Rectangle_Attr_default_instance_._instance.get_mutable()->right_bottom_ = const_cast< ::ascend::presenter::proto::Coordinate*>(
       ::ascend::presenter::proto::Coordinate::internal_default_instance());
 }
-class Rectangle_Attr::HasBitSetters {
- public:
-  static const ::ascend::presenter::proto::Coordinate& left_top(const Rectangle_Attr* msg);
-  static const ::ascend::presenter::proto::Coordinate& right_bottom(const Rectangle_Attr* msg);
-};
-
-const ::ascend::presenter::proto::Coordinate&
-Rectangle_Attr::HasBitSetters::left_top(const Rectangle_Attr* msg) {
-  return *msg->left_top_;
-}
-const ::ascend::presenter::proto::Coordinate&
-Rectangle_Attr::HasBitSetters::right_bottom(const Rectangle_Attr* msg) {
-  return *msg->right_bottom_;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Rectangle_Attr::kLeftTopFieldNumber;
 const int Rectangle_Attr::kRightBottomFieldNumber;
@@ -1592,13 +1503,17 @@ const int Rectangle_Attr::kLabelTextFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Rectangle_Attr::Rectangle_Attr()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsRectangle_Attr();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.Rectangle_Attr)
 }
 Rectangle_Attr::Rectangle_Attr(const Rectangle_Attr& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   label_text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.label_text().size() > 0) {
@@ -1607,23 +1522,22 @@ Rectangle_Attr::Rectangle_Attr(const Rectangle_Attr& from)
   if (from.has_left_top()) {
     left_top_ = new ::ascend::presenter::proto::Coordinate(*from.left_top_);
   } else {
-    left_top_ = nullptr;
+    left_top_ = NULL;
   }
   if (from.has_right_bottom()) {
     right_bottom_ = new ::ascend::presenter::proto::Coordinate(*from.right_bottom_);
   } else {
-    right_bottom_ = nullptr;
+    right_bottom_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:ascend.presenter.proto.Rectangle_Attr)
 }
 
 void Rectangle_Attr::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_Rectangle_Attr_presenter_5fmessage_2eproto.base);
   label_text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&left_top_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&right_bottom_) -
       reinterpret_cast<char*>(&left_top_)) + sizeof(right_bottom_));
+  _cached_size_ = 0;
 }
 
 Rectangle_Attr::~Rectangle_Attr() {
@@ -1638,13 +1552,27 @@ void Rectangle_Attr::SharedDtor() {
 }
 
 void Rectangle_Attr::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* Rectangle_Attr::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const Rectangle_Attr& Rectangle_Attr::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_Rectangle_Attr_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsRectangle_Attr();
   return *internal_default_instance();
 }
 
+Rectangle_Attr* Rectangle_Attr::New(::google::protobuf::Arena* arena) const {
+  Rectangle_Attr* n = new Rectangle_Attr;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void Rectangle_Attr::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.Rectangle_Attr)
@@ -1653,109 +1581,31 @@ void Rectangle_Attr::Clear() {
   (void) cached_has_bits;
 
   label_text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && left_top_ != nullptr) {
+  if (GetArenaNoVirtual() == NULL && left_top_ != NULL) {
     delete left_top_;
   }
-  left_top_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && right_bottom_ != nullptr) {
+  left_top_ = NULL;
+  if (GetArenaNoVirtual() == NULL && right_bottom_ != NULL) {
     delete right_bottom_;
   }
-  right_bottom_ = nullptr;
+  right_bottom_ = NULL;
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* Rectangle_Attr::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<Rectangle_Attr*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .ascend.presenter.proto.Coordinate left_top = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::ascend::presenter::proto::Coordinate::_InternalParse;
-        object = msg->mutable_left_top();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .ascend.presenter.proto.Coordinate right_bottom = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::ascend::presenter::proto::Coordinate::_InternalParse;
-        object = msg->mutable_right_bottom();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // string label_text = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.proto.Rectangle_Attr.label_text");
-        object = msg->mutable_label_text();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool Rectangle_Attr::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.Rectangle_Attr)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ascend.presenter.proto.Coordinate left_top = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_left_top()));
         } else {
@@ -1766,7 +1616,8 @@ bool Rectangle_Attr::MergePartialFromCodedStream(
 
       // .ascend.presenter.proto.Coordinate right_bottom = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_right_bottom()));
         } else {
@@ -1777,7 +1628,8 @@ bool Rectangle_Attr::MergePartialFromCodedStream(
 
       // string label_text = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_label_text()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1809,7 +1661,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void Rectangle_Attr::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1820,13 +1671,13 @@ void Rectangle_Attr::SerializeWithCachedSizes(
   // .ascend.presenter.proto.Coordinate left_top = 1;
   if (this->has_left_top()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::left_top(this), output);
+      1, *this->left_top_, output);
   }
 
   // .ascend.presenter.proto.Coordinate right_bottom = 2;
   if (this->has_right_bottom()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::right_bottom(this), output);
+      2, *this->right_bottom_, output);
   }
 
   // string label_text = 3;
@@ -1839,15 +1690,16 @@ void Rectangle_Attr::SerializeWithCachedSizes(
       3, this->label_text(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.Rectangle_Attr)
 }
 
 ::google::protobuf::uint8* Rectangle_Attr::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.Rectangle_Attr)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1856,14 +1708,14 @@ void Rectangle_Attr::SerializeWithCachedSizes(
   if (this->has_left_top()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, HasBitSetters::left_top(this), target);
+        1, *this->left_top_, deterministic, target);
   }
 
   // .ascend.presenter.proto.Coordinate right_bottom = 2;
   if (this->has_right_bottom()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, HasBitSetters::right_bottom(this), target);
+        2, *this->right_bottom_, deterministic, target);
   }
 
   // string label_text = 3;
@@ -1877,9 +1729,9 @@ void Rectangle_Attr::SerializeWithCachedSizes(
         3, this->label_text(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.Rectangle_Attr)
   return target;
@@ -1889,15 +1741,11 @@ size_t Rectangle_Attr::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.Rectangle_Attr)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string label_text = 3;
   if (this->label_text().size() > 0) {
     total_size += 1 +
@@ -1909,18 +1757,20 @@ size_t Rectangle_Attr::ByteSizeLong() const {
   if (this->has_left_top()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *left_top_);
+        *this->left_top_);
   }
 
   // .ascend.presenter.proto.Coordinate right_bottom = 2;
   if (this->has_right_bottom()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *right_bottom_);
+        *this->right_bottom_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -1928,9 +1778,9 @@ void Rectangle_Attr::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.Rectangle_Attr)
   GOOGLE_DCHECK_NE(&from, this);
   const Rectangle_Attr* source =
-      ::google::protobuf::DynamicCastToGenerated<Rectangle_Attr>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const Rectangle_Attr>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.Rectangle_Attr)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1982,16 +1832,16 @@ void Rectangle_Attr::Swap(Rectangle_Attr* other) {
 }
 void Rectangle_Attr::InternalSwap(Rectangle_Attr* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  label_text_.Swap(&other->label_text_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  label_text_.Swap(&other->label_text_);
   swap(left_top_, other->left_top_);
   swap(right_bottom_, other->right_bottom_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Rectangle_Attr::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -1999,10 +1849,6 @@ void Rectangle_Attr::InternalSwap(Rectangle_Attr* other) {
 
 void PresentImageRequest::InitAsDefaultInstance() {
 }
-class PresentImageRequest::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int PresentImageRequest::kFormatFieldNumber;
 const int PresentImageRequest::kWidthFieldNumber;
@@ -2012,14 +1858,18 @@ const int PresentImageRequest::kRectangleListFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 PresentImageRequest::PresentImageRequest()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsPresentImageRequest();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.PresentImageRequest)
 }
 PresentImageRequest::PresentImageRequest(const PresentImageRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
-      rectangle_list_(from.rectangle_list_) {
+      _internal_metadata_(NULL),
+      rectangle_list_(from.rectangle_list_),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.data().size() > 0) {
@@ -2032,12 +1882,11 @@ PresentImageRequest::PresentImageRequest(const PresentImageRequest& from)
 }
 
 void PresentImageRequest::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_PresentImageRequest_presenter_5fmessage_2eproto.base);
   data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&format_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&height_) -
       reinterpret_cast<char*>(&format_)) + sizeof(height_));
+  _cached_size_ = 0;
 }
 
 PresentImageRequest::~PresentImageRequest() {
@@ -2050,13 +1899,27 @@ void PresentImageRequest::SharedDtor() {
 }
 
 void PresentImageRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* PresentImageRequest::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const PresentImageRequest& PresentImageRequest::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_PresentImageRequest_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsPresentImageRequest();
   return *internal_default_instance();
 }
 
+PresentImageRequest* PresentImageRequest::New(::google::protobuf::Arena* arena) const {
+  PresentImageRequest* n = new PresentImageRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void PresentImageRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.PresentImageRequest)
@@ -2072,110 +1935,21 @@ void PresentImageRequest::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* PresentImageRequest::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<PresentImageRequest*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .ascend.presenter.proto.ImageFormat format = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_format(static_cast<::ascend::presenter::proto::ImageFormat>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 width = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
-        msg->set_width(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // uint32 height = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
-        msg->set_height(::google::protobuf::internal::ReadVarint(&ptr));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // bytes data = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        object = msg->mutable_data();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // repeated .ascend.presenter.proto.Rectangle_Attr rectangle_list = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        do {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::ascend::presenter::proto::Rectangle_Attr::_InternalParse;
-          object = msg->add_rectangle_list();
-          if (size > end - ptr) goto len_delim_till_end;
-          ptr += size;
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-              {parser_till_end, object}, ptr - size, ptr));
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 42 && (ptr += 1));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool PresentImageRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.PresentImageRequest)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ascend.presenter.proto.ImageFormat format = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -2188,7 +1962,8 @@ bool PresentImageRequest::MergePartialFromCodedStream(
 
       // uint32 width = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2201,7 +1976,8 @@ bool PresentImageRequest::MergePartialFromCodedStream(
 
       // uint32 height = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2214,7 +1990,8 @@ bool PresentImageRequest::MergePartialFromCodedStream(
 
       // bytes data = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_data()));
         } else {
@@ -2225,9 +2002,9 @@ bool PresentImageRequest::MergePartialFromCodedStream(
 
       // repeated .ascend.presenter.proto.Rectangle_Attr rectangle_list = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_rectangle_list()));
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_rectangle_list()));
         } else {
           goto handle_unusual;
         }
@@ -2253,7 +2030,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void PresentImageRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2287,20 +2063,19 @@ void PresentImageRequest::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->rectangle_list_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->rectangle_list(static_cast<int>(i)),
-      output);
+      5, this->rectangle_list(static_cast<int>(i)), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.PresentImageRequest)
 }
 
 ::google::protobuf::uint8* PresentImageRequest::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.PresentImageRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2333,12 +2108,12 @@ void PresentImageRequest::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->rectangle_list_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        5, this->rectangle_list(static_cast<int>(i)), target);
+        5, this->rectangle_list(static_cast<int>(i)), deterministic, target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.PresentImageRequest)
   return target;
@@ -2348,15 +2123,11 @@ size_t PresentImageRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.PresentImageRequest)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // repeated .ascend.presenter.proto.Rectangle_Attr rectangle_list = 5;
   {
     unsigned int count = static_cast<unsigned int>(this->rectangle_list_size());
@@ -2396,7 +2167,9 @@ size_t PresentImageRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -2404,9 +2177,9 @@ void PresentImageRequest::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.PresentImageRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const PresentImageRequest* source =
-      ::google::protobuf::DynamicCastToGenerated<PresentImageRequest>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const PresentImageRequest>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.PresentImageRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2462,18 +2235,18 @@ void PresentImageRequest::Swap(PresentImageRequest* other) {
 }
 void PresentImageRequest::InternalSwap(PresentImageRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&rectangle_list_)->InternalSwap(CastToBase(&other->rectangle_list_));
-  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  rectangle_list_.InternalSwap(&other->rectangle_list_);
+  data_.Swap(&other->data_);
   swap(format_, other->format_);
   swap(width_, other->width_);
   swap(height_, other->height_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PresentImageRequest::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -2481,23 +2254,23 @@ void PresentImageRequest::InternalSwap(PresentImageRequest* other) {
 
 void PresentImageResponse::InitAsDefaultInstance() {
 }
-class PresentImageResponse::HasBitSetters {
- public:
-};
-
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int PresentImageResponse::kErrorCodeFieldNumber;
 const int PresentImageResponse::kErrorMessageFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 PresentImageResponse::PresentImageResponse()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    ::protobuf_presenter_5fmessage_2eproto::InitDefaultsPresentImageResponse();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:ascend.presenter.proto.PresentImageResponse)
 }
 PresentImageResponse::PresentImageResponse(const PresentImageResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   error_message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.error_message().size() > 0) {
@@ -2508,10 +2281,9 @@ PresentImageResponse::PresentImageResponse(const PresentImageResponse& from)
 }
 
 void PresentImageResponse::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_PresentImageResponse_presenter_5fmessage_2eproto.base);
   error_message_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   error_code_ = 0;
+  _cached_size_ = 0;
 }
 
 PresentImageResponse::~PresentImageResponse() {
@@ -2524,13 +2296,27 @@ void PresentImageResponse::SharedDtor() {
 }
 
 void PresentImageResponse::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
+const ::google::protobuf::Descriptor* PresentImageResponse::descriptor() {
+  ::protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
 const PresentImageResponse& PresentImageResponse::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_PresentImageResponse_presenter_5fmessage_2eproto.base);
+  ::protobuf_presenter_5fmessage_2eproto::InitDefaultsPresentImageResponse();
   return *internal_default_instance();
 }
 
+PresentImageResponse* PresentImageResponse::New(::google::protobuf::Arena* arena) const {
+  PresentImageResponse* n = new PresentImageResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
 
 void PresentImageResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:ascend.presenter.proto.PresentImageResponse)
@@ -2543,81 +2329,21 @@ void PresentImageResponse::Clear() {
   _internal_metadata_.Clear();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* PresentImageResponse::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<PresentImageResponse*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .ascend.presenter.proto.PresentDataErrorCode error_code = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_error_code(static_cast<::ascend::presenter::proto::PresentDataErrorCode>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string error_message = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("ascend.presenter.proto.PresentImageResponse.error_message");
-        object = msg->mutable_error_message();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool PresentImageResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:ascend.presenter.proto.PresentImageResponse)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .ascend.presenter.proto.PresentDataErrorCode error_code = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -2630,7 +2356,8 @@ bool PresentImageResponse::MergePartialFromCodedStream(
 
       // string error_message = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_error_message()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2662,7 +2389,6 @@ failure:
   return false;
 #undef DO_
 }
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void PresentImageResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2686,15 +2412,16 @@ void PresentImageResponse::SerializeWithCachedSizes(
       2, this->error_message(), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
   // @@protoc_insertion_point(serialize_end:ascend.presenter.proto.PresentImageResponse)
 }
 
 ::google::protobuf::uint8* PresentImageResponse::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:ascend.presenter.proto.PresentImageResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2716,9 +2443,9 @@ void PresentImageResponse::SerializeWithCachedSizes(
         2, this->error_message(), target);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:ascend.presenter.proto.PresentImageResponse)
   return target;
@@ -2728,15 +2455,11 @@ size_t PresentImageResponse::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ascend.presenter.proto.PresentImageResponse)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
   // string error_message = 2;
   if (this->error_message().size() > 0) {
     total_size += 1 +
@@ -2751,7 +2474,9 @@ size_t PresentImageResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
@@ -2759,9 +2484,9 @@ void PresentImageResponse::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:ascend.presenter.proto.PresentImageResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const PresentImageResponse* source =
-      ::google::protobuf::DynamicCastToGenerated<PresentImageResponse>(
+      ::google::protobuf::internal::DynamicCastToGenerated<const PresentImageResponse>(
           &from);
-  if (source == nullptr) {
+  if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:ascend.presenter.proto.PresentImageResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2810,15 +2535,15 @@ void PresentImageResponse::Swap(PresentImageResponse* other) {
 }
 void PresentImageResponse::InternalSwap(PresentImageResponse* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  error_message_.Swap(&other->error_message_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  error_message_.Swap(&other->error_message_);
   swap(error_code_, other->error_code_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PresentImageResponse::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_presenter_5fmessage_2eproto);
-  return ::file_level_metadata_presenter_5fmessage_2eproto[kIndexInFileMessages];
+  protobuf_presenter_5fmessage_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_presenter_5fmessage_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 
@@ -2826,31 +2551,5 @@ void PresentImageResponse::InternalSwap(PresentImageResponse* other) {
 }  // namespace proto
 }  // namespace presenter
 }  // namespace ascend
-namespace google {
-namespace protobuf {
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::OpenChannelRequest* Arena::CreateMaybeMessage< ::ascend::presenter::proto::OpenChannelRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::OpenChannelRequest >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::OpenChannelResponse* Arena::CreateMaybeMessage< ::ascend::presenter::proto::OpenChannelResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::OpenChannelResponse >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::HeartbeatMessage* Arena::CreateMaybeMessage< ::ascend::presenter::proto::HeartbeatMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::HeartbeatMessage >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::Coordinate* Arena::CreateMaybeMessage< ::ascend::presenter::proto::Coordinate >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::Coordinate >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::Rectangle_Attr* Arena::CreateMaybeMessage< ::ascend::presenter::proto::Rectangle_Attr >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::Rectangle_Attr >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::PresentImageRequest* Arena::CreateMaybeMessage< ::ascend::presenter::proto::PresentImageRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::PresentImageRequest >(arena);
-}
-template<> PROTOBUF_NOINLINE ::ascend::presenter::proto::PresentImageResponse* Arena::CreateMaybeMessage< ::ascend::presenter::proto::PresentImageResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::ascend::presenter::proto::PresentImageResponse >(arena);
-}
-}  // namespace protobuf
-}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
