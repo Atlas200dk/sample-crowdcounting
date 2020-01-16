@@ -1,2 +1,0 @@
-/home/ascend/gitxyt/sample-crowdcounting/build/intermediates/host/../../../run/out/main
-/home/ascend/gitxyt/sample-crowdcounting/build/intermediates/host/../../../run/out/libHost.so
