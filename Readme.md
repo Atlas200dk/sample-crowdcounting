@@ -21,12 +21,11 @@
 
     执行如下命令在最后一行添加DDK\_HOME及LD\_LIBRARY\_PATH的环境变量。
 
-    **export DDK\_HOME=/home/XXX/tools/che/ddk/ddk**
+    **export DDK\_HOME=$HOME/tools/che/ddk/ddk**
 
     **export LD\_LIBRARY\_PATH=$DDK\_HOME/uihost/lib**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   XXX为Mind Studio安装用户，/home/XXX/tools为DDK默认安装路径。  
+    >![](public_sys-resources/icon-note.gif) **说明：**     
     >-   如果此环境变量已经添加，则此步骤可跳过。  
 
     输入:wq!保存退出。
@@ -37,7 +36,7 @@
 
 2.  <a name="li953280133816"></a>获取源码包。
 
-    将[https://gitee.com/Atlas200DK/sample-crowdcounting](https://gitee.com/Atlas200DK/sample-crowdcounting)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：_/home/ascend/sample-crowdcounting_。
+    将[https://gitee.com/Atlas200DK/sample-crowdcounting](https://gitee.com/Atlas200DK/sample-crowdcounting)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/sample-crowdcounting。
 
 3.  <a name="li1365682471610"></a>获取此应用中所需要的原始网络模型。
 
@@ -87,7 +86,7 @@
 
 ## 部署<a name="section7994174585917"></a>
 
-1.  以Mind Studio安装用户进入密集人数统计应用代码所在根目录，如/home/ascend/sample-crowdcounting。
+1.  以Mind Studio安装用户进入密集人数统计应用代码所在根目录，如：$HOME/sample-crowdcounting。
 2.  <a name="li9634105881418"></a>执行部署脚本，进行工程环境准备，包括ascenddk公共库的编译与部署、Presenter Server服务器的配置等操作，其中Presenter Server用于接收Application发送过来的数据并通过浏览器进行结果展示。
 
     **bash deploy.sh** _host\_ip_ _model\_mode_
@@ -153,7 +152,7 @@
 
 1.  运行密集人数统计应用程序。
 
-    在**sample-crowdcounting**目录下执行如下命令运行Face Detection应用程序。
+    在**sample-crowdcounting**目录下执行如下命令运行crowdcounting应用程序。
 
     **bash run\_crowdcountingapp.sh** _host\_ip presenter\_view\_appname channel1 \[channel2\]_  &
 
@@ -193,7 +192,7 @@
 
     若要停止密集人群人数统计应用程序，可执行如下操作。
 
-    以Mind Studio安装用户在_** /home/ascend/sample-crowdcounting**_  目录下执行如下命令：
+    以Mind Studio安装用户在**$HOME/sample-crowdcounting**目录下执行如下命令：
 
     **bash stop\_crowdcountingapp.sh** _host\_ip_
 
