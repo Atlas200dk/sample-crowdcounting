@@ -40,7 +40,7 @@
 
 3.  <a name="li1365682471610"></a>获取此应用中所需要的原始网络模型。
 
-    参考[表 crowd\_counting中使用模型](#table144841813177)获取此应用中所用到的原始网络模型，并将其存放到Mind Studio所在Ubuntu服务器的任意目录，例如$HOME/ascend/models/crowdcounting。
+    参考[表 crowd\_counting中使用模型](#table144841813177)获取此应用中所用到的原始网络模型，并将其存放到Mind Studio所在Ubuntu服务器的任意目录，例如：$HOME/ascend/models/crowdcounting。
 
     **表 1**  crowd\_counting中使用模型
 
@@ -192,7 +192,7 @@
 
     若要停止密集人群人数统计应用程序，可执行如下操作。
 
-    以Mind Studio安装用户在**$HOME/sample-crowdcounting**目录下执行如下命令：
+    以Mind Studio安装用户在$HOME/sample-crowdcounting目录下执行如下命令：
 
     **bash stop\_crowdcountingapp.sh** _host\_ip_
 
@@ -211,7 +211,7 @@
     **ps -ef | grep presenter | grep crowd\_counting**
 
     ```
-    ascend@ascend-HP-ProDesk-600-G4-PCI-MT:~/sample-facedetection$ ps -ef | grep presenter | grep crowd_counting
+    ascend@ascend-HP-ProDesk-600-G4-PCI-MT:~/sample-_crowdcounting$ ps -ef | grep presenter | grep crowd_counting
     ascend    7701  1615  0 14:21 pts/8    00:00:00 python3 presenterserver/presenter_server.py --app crowd_counting
     ```
 
