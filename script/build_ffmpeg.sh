@@ -41,6 +41,8 @@ function build_ffmpeg()
     
     if [ -e "${AGENT_PATH}/ffmpeg/build_OK" ];then
         echo "ffmpeg so is ok.."
+        cd ${install_prefix}/lib && tar -cvf ${AGENT_PATH}/ffmpeg_lib.tar ./* >> ${AGENT_PATH}/ffmpeg/ffbuild/build.log
+        cd ${AGENT_PATH}
         return 0
     fi
     mkdir -p ${install_prefix}
