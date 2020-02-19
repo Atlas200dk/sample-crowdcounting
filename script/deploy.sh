@@ -37,7 +37,14 @@ check_param_configure()
 
 function build_common()
 {
-	echo "build common lib..."
+    echo "build common lib..."
+    if [ ! -d "${HOME}/ascend_ddk" ];then
+        mkdir $HOME/ascend_ddk
+        if [[ $? -ne 0 ]];then
+            echo "ERROR: Execute mkdir command failed, Please check your environment"
+            return 1
+        fi
+    fi
     bash ${script_path}/build_ezdvpp.sh ${remote_host}
     if [ $? -ne 0 ];then
         echo "ERROR: Failed to deploy ezdvpp"
