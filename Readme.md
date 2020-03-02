@@ -11,113 +11,20 @@
 -   已完成Mind Studio的安装。
 -   已完成Atlas 200 DK开发者板与Mind Studio的连接，交叉编译器的安装，SD卡的制作及基本信息的配置等。
 
-## 软件准备<a name="section8534138124114"></a>
+## 部署<a name="zh-cn_topic_0203223294_section081240125311"></a>
 
-运行此Sample前，需要按照此章节获取源码包，并进行相关的环境配置。
+1.  部署，可以选择如下快速部署或者常规方法部署，二选一即可；
 
-1.  <a name="li953280133816"></a>获取源码包。
+    1.1 快速部署，请参考：https://gitee.com/Atlas200DK/faster-deploy 。
 
-    将[https://gitee.com/Atlas200DK/sample-crowdcounting/tree/1.3x.0.0/](https://gitee.com/Atlas200DK/sample-crowdcounting/tree/1.3x.0.0/)仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/AscendProjects/sample-crowdcounting
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >-   该快速部署脚本可以快速部署多个案例，请选择crowdcounting案例部署即可。  
+    >-   该快速部署脚本自动完成了代码下载、模型转换、环境变量配置等流程，如果需要了解详细的部署过程请选择常规部署方式，请转**1.2 常规部署**。
 
-2.  <a name="li8221184418455"></a>获取此应用中所需要的原始网络模型。
+    1.2 常规部署，请参考：https://gitee.com/Atlas200DK/sample-README/tree/master/sample-crowdcounting 。
 
-    参考[表 crowd\_counting中使用的模型](#table117203103464)获取此应用中所用到的原始网络模型，并将其存放到Mind Studio所在Ubuntu服务器的任意目录。例如：$HOME/models/crowdcounting。
-
-    **表 1**  crowd\_counting中使用的模型
-
-    <a name="table117203103464"></a>
-    <table><thead align="left"><tr id="row4859191074617"><th class="cellrowborder" valign="top" width="17.32173217321732%" id="mcps1.2.4.1.1"><p id="p18859111074613"><a name="p18859111074613"></a><a name="p18859111074613"></a>模型名称</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="9.68096809680968%" id="mcps1.2.4.1.2"><p id="p17859171013469"><a name="p17859171013469"></a><a name="p17859171013469"></a>模型说明</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="72.997299729973%" id="mcps1.2.4.1.3"><p id="p1385991094614"><a name="p1385991094614"></a><a name="p1385991094614"></a>模型下载路径</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row88591310124617"><td class="cellrowborder" valign="top" width="17.32173217321732%" headers="mcps1.2.4.1.1 "><p id="p13106121801715"><a name="p13106121801715"></a><a name="p13106121801715"></a>crowd_counting</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="9.68096809680968%" headers="mcps1.2.4.1.2 "><p id="p13106171831710"><a name="p13106171831710"></a><a name="p13106171831710"></a>密集人群人数统计网络模型。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="72.997299729973%" headers="mcps1.2.4.1.3 "><p id="p110671813170"><a name="p110671813170"></a><a name="p110671813170"></a>请参考<a href="https://gitee.com/HuaweiAscend/models/tree/master/computer_vision/object_detect/crowd_counting" target="_blank" rel="noopener noreferrer">https://gitee.com/HuaweiAscend/models/tree/master/computer_vision/object_detect/crowd_counting</a>目录中README.md下载原始网络模型文件。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-
-3.  以Mind Studio安装用户登录Mind Studio所在Ubuntu服务器，确定当前使用的DDK版本号并设置环境变量DDK\_HOME，tools\_version，NPU\_DEVICE\_LIB和LD\_LIBRARY\_PATH。
-    1.  <a name="zh-cn_topic_0203223294_li61417158198"></a>查询当前使用的DDK版本号。
-
-        可通过Mind Studio工具查询，也可以通过DDK软件包进行获取。
-
-        -   使用Mind Studio工具查询。
-
-            在Mind Studio工程界面依次选择“File \> Settings \> System Settings \> Ascend DDK“，弹出如[图 DDK版本号查询](zh-cn_topic_0203223294.md#fig94023140222)所示界面。
-
-            **图 1**  DDK版本号查询<a name="zh-cn_topic_0203223294_fig17553193319118"></a>  
-            ![](figures/DDK版本号查询.png "DDK版本号查询")
-
-            其中显示的**DDK Version**就是当前使用的DDK版本号，如**1.31.T15.B150**。
-
-        -   通过DDK软件包进行查询。
-
-            通过安装的DDK的包名获取DDK的版本号。
-
-            DDK包的包名格式为：**Ascend\_DDK-\{software version\}-\{interface version\}-x86\_64.ubuntu16.04.tar.gz**
-
-            其中**software version**就是DDK的软件版本号。
-
-            例如：
-
-            DDK包的包名为Ascend\_DDK-1.31.T15.B150-1.1.1-x86\_64.ubuntu16.04.tar.gz，则此DDK的版本号为1.31.T15.B150。
-
-    2.  设置环境变量。
-
-        **vim \~/.bashrc**
-
-        执行如下命令在最后一行添加DDK\_HOME及LD\_LIBRARY\_PATH的环境变量。
-
-        **export tools\_version=_1.31.X.X_**
-
-        **export DDK\_HOME=\\$HOME/.mindstudio/huawei/ddk/\\$tools\_version/ddk**
-
-        **export NPU\_DEVICE\_LIB=$DDK\_HOME/../RC/host-aarch64\_Ubuntu16.04.3/lib**
-
-        **export LD\_LIBRARY\_PATH=$DDK\_HOME/lib/x86\_64-linux-gcc5.4**
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >-   **_1.31.X.X_**是[a](#zh-cn_topic_0203223294_li61417158198)中查询到的DDK版本号，需要根据查询结果对应填写，如**1.31.T15.B150**  
-        >-   如果此环境变量已经添加，则此步骤可跳过。  
-
-        输入**:wq!**保存退出。
-
-        执行如下命令使环境变量生效。
-
-        **source \~/.bashrc**
-
-4.  将原始网络模型转换为适配昇腾AI处理器的模型。
-    1.  在Mind Studio操作界面的顶部菜单栏中选择**Tools \> Model Convert**，进入模型转换界面。
-    2.  在弹出的**Model** **Conversion**操作界面中，进行模型转换配置。
-        -   Model File选择[步骤2](#li8221184418455)中下载的模型文件。
-        -   Model Name填写为[表1](#table117203103464)对应的**模型名称**。
-        -   crowd\_counting模型转换时的非默认配置如：[图2 crowd\_counting模型转换](#fig14958101714361)。
-        -   其他保持默认值
-
-            **图 2**  crowd\_counting模型转换<a name="fig8912228135419"></a>  
-            
-
-            ![](figures/zh-cn_image_0219068294.png)
-
-            ![](figures/zh-cn_image_0219068655.png)
-
-    3.  单击**OK**开始转换模型。
-
-        模型转换成功后，后缀为.om的离线模型存放地址为：$HOME/modelzoo/crowd\_counting/device。
-
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >-   Mind Studio模型转换中每一步的具体意义和参数说明可以参考[Mind Studio用户手册](https://ascend.huawei.com/doc/mindstudio/)中的“模型转换“章节。  
-
-
-5.  将转换好的模型文件（.om文件）上传到[步骤1](#li953280133816)中源码所在路径的“**sample-crowdcounting/script**”目录下。
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >-   该部署方式，需要手动完成代码下载、模型转换、环境变量配置等过程。完成后，会对其中的过程会更加了解。
 
 ## 编译<a name="section1759513564117"></a>
 
@@ -131,7 +38,7 @@
 
 2.  在src/param\_configure.conf文件中配置相关工程信息。
 
-    **图 3**  配置文件路径<a name="fig1557065718252"></a>  
+    **图 1**  配置文件路径<a name="fig1557065718252"></a>  
     
 
     ![](figures/zh-cn_image_0219071560.png)
@@ -177,6 +84,16 @@
     >-   当前RTSP视频流只支持rtsp://ip:port/path格式，如果需要使用其它格式的url，需要把video\_decode.cpp中的IsValidRtsp函数去除，或者直接返回true，跳过正则表达式匹配。  
     >-   本样例中提供的RTSP流地址不可以直接使用。如果需要使用RTSP，请在本地使用live555或其它方式制作RTSP视频流，并且可以在VLC中播放。然后将本地制作好的RTSP视频流的URL填入配置文件的相应参数中，即可运行。  
 
+3. 执行deploy脚本， 进行配置参数调整及第三方库下载编译
+    打开Mind Studio工具的Terminal，此时默认在代码主目录下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行deploy脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
+    
+    **图 2**  执行deploy脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
+    
+    ![](figures/deploy.png)
+    
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >-   deploy时，需要选择与开发板通信的主机侧ip，一般为虚拟网卡配置的ip。如果此ip和开发板ip属于同网段，则会自动选择并部署。如果非同网段，则需要手动输入与开发板通信的主机侧ip才能完成deploy。
+
 3.  开始编译，打开Mind Studio工具，在工具栏中点击**Build \> Build \> Build-Configuration**。会在目录下生成build和run文件夹。
 
     >![](public_sys-resources/icon-notice.gif) **须知：**   
@@ -188,35 +105,35 @@
 
     **bash run\_present\_server.sh**
 
-    **图 4**  启动PresenterServer<a name="fig102142024389"></a>  
+    **图 3**  启动PresenterServer<a name="fig102142024389"></a>  
     
 
     ![](figures/zh-cn_image_0219072221.png)
 
     -   当提示“Please choose one to show the presenter in browser\(default: 127.0.0.1\):“时，请输入在浏览器中访问Presenter Server服务所使用的IP地址（一般为访问Mind Studio的IP地址）。
 
-        如[图5](#fig73590910118)所示，请在“Current environment valid ip list“中选择通过浏览器访问Presenter Server服务使用的IP地址，并输入存储视频解析数据的路径。
+        如[图4](#fig73590910118)所示，请在“Current environment valid ip list“中选择通过浏览器访问Presenter Server服务使用的IP地址，并输入存储视频解析数据的路径。
 
-        **图 5**  工程部署示意图<a name="fig73590910118"></a>  
+        **图 4**  工程部署示意图<a name="fig73590910118"></a>  
         
 
         ![](figures/zh-cn_image_0219072532.png)
 
-    如[图6](#fig19953175965417)所示，表示presenter\_server的服务启动成功。
+    如[图5](#fig19953175965417)所示，表示presenter\_server的服务启动成功。
 
-    **图 6**  Presenter Server进程启动<a name="fig19953175965417"></a>  
+    **图 5**  Presenter Server进程启动<a name="fig19953175965417"></a>  
     
 
     ![](figures/zh-cn_image_0219072725.png)
 
     使用上图提示的URL登录Presenter Server，仅支持Chrome浏览器，IP地址为[图5](#fig73590910118)中输入的IP地址，端口号默为7007，如下图所示，表示Presenter Server启动成功。
 
-    **图 7**  主页显示<a name="fig129539592546"></a>  
+    **图 6**  主页显示<a name="fig129539592546"></a>  
     ![](figures/主页显示.png "主页显示")
 
     Presenter Server、Mind Studio与Atlas 200 DK之间通信使用的IP地址示例如下图所示：
 
-    **图 8**  IP地址示例<a name="fig195318596543"></a>  
+    **图 7**  IP地址示例<a name="fig195318596543"></a>  
     ![](figures/IP地址示例.png "IP地址示例")
 
     -   Atlas 200 DK开发者板使用的IP地址为192.168.1.2（USB方式连接）。
@@ -238,9 +155,9 @@
 
 1.  运行Crowd Counting程序
 
-    在Mind Studio工具的工具栏中找到Run按钮，点击**Run \> Run 'sample-crowdcounting'**，如[图9](#fig12953163061713)所示，可执行程序已经在开发板执行。
+    在Mind Studio工具的工具栏中找到Run按钮，点击**Run \> Run 'sample-crowdcounting'**，如[图8](#fig12953163061713)所示，可执行程序已经在开发板执行。
 
-    **图 9**  程序运行示意图<a name="fig12953163061713"></a>  
+    **图 8**  程序运行示意图<a name="fig12953163061713"></a>  
     
 
     ![](figures/zh-cn_image_0219073392.png)
@@ -249,7 +166,7 @@
 
     等待Presenter Agent传输数据给服务端，单击“Refresh”刷新，当有数据时相应的Channel 的Status变成绿色，如[图 Presenter Server界面](#fig69382913311)所示
 
-    **图 10**  Presenter Server界面<a name="fig69382913311"></a>  
+    **图 9**  Presenter Server界面<a name="fig69382913311"></a>  
     ![](figures/Presenter-Server界面.png "Presenter-Server界面")
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -266,7 +183,7 @@
 
     单击停止按钮停止Crowd Counting应用程序。如[图 Crowd Counting应用程序运行结束](#fig464152917203)所示应用程序已停止运行
 
-    **图 11**  Crowd Counting应用程序运行结束<a name="fig464152917203"></a>  
+    **图 10**  Crowd Counting应用程序运行结束<a name="fig464152917203"></a>  
     
 
     ![](figures/zh-cn_image_0219075771.png)
