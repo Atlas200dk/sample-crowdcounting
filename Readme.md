@@ -1,52 +1,52 @@
-中文|[English](Readme_EN.md)
+English|[中文](Readme_cn.md)
 
-# 密集人群人数统计<a name="ZH-CN_TOPIC_0228461893"></a>
+# Dense Crowd Counting<a name="EN-US_TOPIC_0228461893"></a>
 
-开发者将本应用部署至Atlas 200 DK或者AI加速云服务器上实现对本地mp4文件或者RTSP视频流进行解码，对视频帧中的人群图像进行人头数量的预测，并将预测的结果信息发送至Presenter Server端进行展示。
+Developers can deploy this application on the Atlas 200 DK or the AI acceleration cloud server to decode local MP4 files or RTSP video streams, predict the number of people in the crowd images, and send the result to the Presenter Server for storage and display.
 
-当前分支中的应用适配**1.32.0.0及以上**版本的[DDK&RunTime](https://ascend.huawei.com/resources)。
+The applications in the current version branch adapt to  [DDK&RunTime](https://ascend.huawei.com/resources) **1.32.0.0 and later**.
 
-## 前提条件<a name="section137245294533"></a>
+## Prerequisites<a name="section137245294533"></a>
 
-部署此Sample前，需要准备好以下环境：
+Before deploying this sample, ensure that:
 
--   已完成Mind Studio的安装。
--   已完成Atlas 200 DK开发者板与Mind Studio的连接，交叉编译器的安装，SD卡的制作及基本信息的配置等。
+-   Mind Studio  has been installed.
+-   The Atlas 200 DK developer board has been connected to  Mind Studio, the cross compiler has been installed, the SD card has been prepared, and basic information has been configured.
 
-## 部署<a name="section412811285117"></a>
+## Deployment<a name="section412811285117"></a>
 
-可以选择如下快速部署或者常规方法部署，二选一即可：
+You can use either of the following methods:
 
-1.  快速部署，请参考：  [https://gitee.com/Atlas200DK/faster-deploy](https://gitee.com/Atlas200DK/faster-deploy)  。
+1.  Quick deployment: visit  [https://github.com/Atlas200dk/faster-deploy](https://github.com/Atlas200dk/faster-deploy).
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   该快速部署脚本可以快速部署多个案例，请选择**crowdcounting**案例部署即可。  
-    >-   该快速部署脚本自动完成了代码下载、模型转换、环境变量配置等流程，如果需要了解详细的部署过程请选择常规部署方式。转: **[2. 常规部署](#li3208251440)**  
+    >![](public_sys-resources/icon-note.gif) **NOTE:**   
+    >-   The quick deployment script can be used to deploy multiple samples rapidly. Select  **crowdcounting**.  
+    >-   The quick deployment script automatically completes code download, model conversion, and environment variable configuration. To learn about the detailed deployment process, go to:  **[2. Common deployment](#li3208251440)**.  
 
-2.  <a name="li3208251440"></a>常规部署，请参考：  [https://gitee.com/Atlas200DK/sample-README/tree/master/sample-crowdcounting](https://gitee.com/Atlas200DK/sample-README/tree/master/sample-crowdcounting)  。
+2.  <a name="li3208251440"></a>Common deployment: visit  [https://github.com/Atlas200dk/sample-README/tree/master/sample-crowdcounting](https://github.com/Atlas200dk/sample-README/tree/master/sample-crowdcounting).
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   该部署方式，需要手动完成代码下载、模型转换、环境变量配置等过程。完成后，会对其中的过程更加了解。  
+    >![](public_sys-resources/icon-note.gif) **NOTE:**   
+    >-   In this deployment mode, you need to manually download code, convert models, and configure environment variables.  
 
 
-## 编译<a name="section1759513564117"></a>
+## Build<a name="section1759513564117"></a>
 
-1.  打开对应的工程。
+1.  Open the project.
 
-    以Mind Studio安装用户在命令行中进入安装包解压后的“MindStudio-ubuntu/bin”目录，如：$HOME/MindStudio-ubuntu/bin。执行如下命令启动Mind Studio
+    Go to the directory that stores the decompressed installation package as the Mind Studio installation user in CLI mode, for example,  **$HOME/MindStudio-ubuntu/bin**. Run the following command to start Mind Studio:
 
     **./MindStudio.sh**
 
-    启动成功后，打开**sample-crowdcounting**工程。
+    Open the  **sample-crowdcounting**  project.
 
-2.  在src/param\_configure.conf文件中配置相关工程信息。
+2.  Configure project information in the  **src/param\_configure.conf**  file.
 
-    **图 1**  配置文件路径<a name="zh-cn_topic_0219059426_fig1557065718252"></a>  
+    **Figure  1**  Configuration file path<a name="en-us_topic_0219059426_fig1557065718252"></a>  
     
 
-    ![](figures/zh-cn_image_0219071560.png)
+    ![](figures/en-us_image_0219071560.png)
 
-    该配置文件内容如下：
+    Content of the configuration file:
 
     ```
     remote_host=
@@ -55,14 +55,14 @@
     rtsp_video_stream=
     ```
 
-    需要手动添加参数配置:
+    Parameter settings to be manually added:
 
-    -   remote\_host：配置为Atlas 200 DK开发者板的IP地址。
-    -   presenter\_view\_app\_name: 用户自定义的在PresenterServer界面展示的View Name，此View Name需要在Presenter Server展示界面唯一，只能为大小写字母、数字、“\_”的组合，位数3\~20。
-    -   video\_path\_of\_host：配置为HOST侧的视频文件的绝对路径。
-    -   rtsp\_video\_stream：配置为RTSP视频流的URL。
+    -   **remote\_host**: IP address of the Atlas 200 DK developer board
+    -   **presenter\_view\_app\_name**: value of  **View Name**  on the  **Presenter Server**  page, which must be unique. The value consists of 3 to 20 characters and supports only uppercase letters, lowercase letters, digits, and underscores \(\_\).
+    -   **video\_path\_of\_host**: absolute path of a video file on the host side
+    -   **rtsp\_video\_stream**: URL of RTSP video streams
 
-    视频文件配置示例如下：
+    Sample of video file configuration:
 
     ```
     remote_host=192.168.1.2
@@ -71,7 +71,7 @@
     rtsp_video_stream=
     ```
 
-    Rtsp视频流配置示例如下：
+    Sample of RTSP video stream configuration:
 
     ```
     remote_host=192.168.1.2
@@ -80,121 +80,121 @@
     rtsp_video_stream=rtsp://192.168.2.37:554/cam/realmonitor?channel=1&subtype=0
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   参数remote\_host和presenter\_view\_app\_name：必须全部填写，否则无法通过build。  
-    >-   注意所填参数不用使用“”。  
-    >-   参数video\_path\_of\_host和rtsp\_video\_stream必须至少填写一项。  
-    >-   当前RTSP视频流只支持rtsp://ip:port/path格式，如果需要使用其它格式的url，需要把video\_decode.cpp中的IsValidRtsp函数去除，或者直接返回true，跳过正则表达式匹配。  
-    >-   本样例中提供的RTSP流地址不可以直接使用。如果需要使用RTSP，请在本地使用live555或其它方式制作RTSP视频流，并且可以在VLC中播放。然后将本地制作好的RTSP视频流的URL填入配置文件的相应参数中，即可运行。  
+    >![](public_sys-resources/icon-note.gif) **NOTE:**   
+    >-   **remote\_host**  and  **presenter\_view\_app\_name**  must be set. Otherwise, the build fails.  
+    >-   Do not use double quotation marks \(""\) during parameter settings.  
+    >-   Either  **video\_path\_of\_host**  or  **rtsp\_video\_stream**  must be set.  
+    >-   Currently, RTSP video streams support only the  **rtsp://ip:port/path**  format. To use URLs in other formats, you need to delete the** IsValidRtsp**  function from the  **video\_decode.cpp**  file or configure the  **IsValidRtsp**  function to directly return  **true**  to skip regular expression matching.  
+    >-   The RTSP stream URL provided in this sample cannot be directly used. If RTSP streams are required, create RTSP streams locally either using LIVE555 or other methods, which must support playback in the VLC. Type the URL of the RTSP video streams in the configuration file.  
 
-3.  执行deploy脚本， 进行配置参数调整及第三方库下载编译 打开Mind Studio工具的Terminal，此时默认在代码主目录下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行deploy脚本](#zh-cn_topic_0219059426_fig202009167369)所示。
+3.  Run the  **deploy.sh**  script to adjust configuration parameters and download and compile the third-party library. Open the  **Terminal**  window of Mind Studio. By default, the home directory of the code is used. Run the  **deploy.sh**  script in the background to deploy the environment, as shown in  [Figure 2](#en-us_topic_0219059426_fig202009167369).
 
-    **图 2**  执行deploy脚本<a name="zh-cn_topic_0219059426_fig202009167369"></a>  
-    ![](figures/执行deploy脚本-28.png "执行deploy脚本-28")
+    **Figure  2**  Running the deploy.sh script<a name="en-us_topic_0219059426_fig202009167369"></a>  
+    ![](figures/running-the-deploy-sh-script-26.png "running-the-deploy-sh-script-26")
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   首次deploy时，没有部署第三方库时会自动下载并编译，耗时可能比较久，请耐心等待。后续再重新编译时，不会重复下载编译，部署如上图所示。  
-    >-   deploy时，需要选择与开发板通信的主机侧ip，一般为虚拟网卡配置的ip。如果此ip和开发板ip属于同网段，则会自动选择并部署。如果非同网段，则需要手动输入与开发板通信的主机侧ip才能完成deploy。  
+    >![](public_sys-resources/icon-note.gif) **NOTE:**   
+    >-   During the first deployment, if no third-party library is used, the system automatically downloads and builds the third-party library, which may take a long time. The third-party library can be directly used for the subsequent build.  
+    >-   During deployment, select the IP address of the host that communicates with the developer board. Generally, the IP address is the IP address configured for the virtual NIC. If the IP address is in the same network segment as the IP address of the developer board, it is automatically selected for deployment. If they are not in the same network segment, you need to manually type the IP address of the host that communicates with the Atlas DK to complete the deployment.  
 
-4.  开始编译，打开Mind Studio工具，在工具栏中点击**Build \> Build \> Build-Configuration**。会在目录下生成build和run文件夹。
+4.  Start building. Open Mind Studio and choose  **Build \> Build \> Build-Configuration**  from the main menu. The  **build**  and  **run**  folders are generated in the directory.
 
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >首次编译工程时，**Build \> Build**为灰色不可点击状态。需要点击**Build \> Edit Build Configuration**，配置编译参数后再进行编译。  
+    >![](public_sys-resources/icon-notice.gif) **NOTICE:**   
+    >When you build a project for the first time,  **Build \> Build**  is unavailable. You need to choose  **Build \> Edit Build Configuration**  to set parameters before the build.  
 
-5.  启动Presenter Server。<a name="zh-cn_topic_0219059426_fig129539592222"></a>  
+5.  Start Presenter Server.<a name="en-us_topic_0219059426_fig129539592222"></a>  
 
-    打开Mindstudio工具的Terminal，在应用代码存放路径下，执行如下命令在后台启动Crowd Counting应用的Presenter Server主程序。如[图 启动PresenterServer](#zh-cn_topic_0219059426_fig102142024389)所示。
+    Open the  **Terminal**  window of Mind Studio. Under the code storage path, run the following command to start the Presenter Server program of the license crowd counting application on the server, as shown in  [Figure 3](#en-us_topic_0219059426_fig102142024389).
 
     **bash run\_present\_server.sh**
 
-    **图 3**  启动PresenterServer<a name="zh-cn_topic_0219059426_fig102142024389"></a>  
+    **Figure  3**  Starting Presenter Server<a name="en-us_topic_0219059426_fig102142024389"></a>  
     
 
-    ![](figures/zh-cn_image_0219072221.png)
+    ![](figures/en-us_image_0219072221.png)
 
-    -   当提示“Please choose one to show the presenter in browser\(default: 127.0.0.1\):“时，请输入在浏览器中访问Presenter Server服务所使用的IP地址（一般为访问Mind Studio的IP地址）。
+    -   When the message  **Please choose one to show the presenter in browser\(default: 127.0.0.1\):**  is displayed, type the IP address \(usually IP address for accessing Mind Studio\) used for accessing the Presenter Server service in the browser.
 
-        如[图4](#zh-cn_topic_0219059426_fig73590910118)所示，请在“Current environment valid ip list“中选择通过浏览器访问Presenter Server服务使用的IP地址，并输入存储视频解析数据的路径。
+        Select the IP address used by the browser to access the Presenter Server service in  **Current environment valid ip list**  and type the path for storing video analysis data, as shown in  [Figure 4](#en-us_topic_0219059426_fig73590910118).
 
-        **图 4**  工程部署示意图<a name="zh-cn_topic_0219059426_fig73590910118"></a>  
+        **Figure  4**  Project deployment<a name="en-us_topic_0219059426_fig73590910118"></a>  
         
 
-        ![](figures/zh-cn_image_0219072532.png)
+        ![](figures/en-us_image_0219072532.png)
 
-    如[图5](#zh-cn_topic_0219059426_fig19953175965417)所示，表示presenter\_server的服务启动成功。
+    [Figure 5](#en-us_topic_0219059426_fig19953175965417)  shows that the Presenter Server service has been started successfully.
 
-    **图 5**  Presenter Server进程启动<a name="zh-cn_topic_0219059426_fig19953175965417"></a>  
+    **Figure  5**  Starting the Presenter Server process<a name="en-us_topic_0219059426_fig19953175965417"></a>  
     
 
-    ![](figures/zh-cn_image_0219072725.png)
+    ![](figures/en-us_image_0219072725.png)
 
-    使用上图提示的URL登录Presenter Server，仅支持Chrome浏览器，IP地址为[图4](#zh-cn_topic_0219059426_fig73590910118)中输入的IP地址，端口号默为7007，如下图所示，表示Presenter Server启动成功。
+    Use the URL shown in the preceding figure to log in to Presenter Server \(only Google Chrome is supported\). The IP address is that typed in  [Figure 4](#en-us_topic_0219059426_fig73590910118)  and the default port number is  **7007**. The following figure indicates that Presenter Server has been started successfully.
 
-    **图 6**  主页显示<a name="zh-cn_topic_0219059426_fig129539592546"></a>  
-    ![](figures/主页显示-29.png "主页显示-29")
+    **Figure  6**  Home page<a name="en-us_topic_0219059426_fig129539592546"></a>  
+    ![](figures/home-page-27.png "home-page-27")
 
-    Presenter Server、Mind Studio与Atlas 200 DK之间通信使用的IP地址示例如下图所示：
+    The following figure shows the IP address used by Presenter Server and  Mind Studio  to communicate with the Atlas 200 DK.
 
-    **图 7**  IP地址示例<a name="zh-cn_topic_0219059426_fig195318596543"></a>  
-    ![](figures/IP地址示例-30.png "IP地址示例-30")
+    **Figure  7**  IP address example<a name="en-us_topic_0219059426_fig195318596543"></a>  
+    ![](figures/ip-address-example-28.png "ip-address-example-28")
 
-    -   Atlas 200 DK开发者板使用的IP地址为192.168.1.2（USB方式连接）。
-    -   Presenter Server与Atlas 200 DK通信的IP地址为UI Host服务器中与Atlas 200 DK在同一网段的IP地址，例如：192.168.1.223。
-    -   通过浏览器访问Presenter Server的IP地址本示例为：10.10.0.1，由于Presenter Server与Mind Studio部署在同一服务器，此IP地址也为通过浏览器访问Mind Studio的IP。
+    -   The IP address of the Atlas 200 DK developer board is  **192.168.1.2**  \(connected in USB mode\).
+    -   The IP address used by Presenter Server to communicate with the Atlas 200 DK is in the same network segment as the IP address of the Atlas 200 DK on the UI Host server. For example:  **192.168.1.223**.
+    -   The following describes how to access the IP address \(such as  **10.10.0.1**\) of Presenter Server using a browser. Because Presenter Server and  Mind Studio  are deployed on the same server, you can access  Mind Studio  through the browser using the same IP address.
 
-6.  密集人群人数统计应用支持解析本地视频和RTSP视频流。
-    -   如果需要解析本地视频，需要将视频文件传到Host侧。
+6.  The crowd counting application can parse local videos and RTSP video streams.
+    -   Before parsing a local video, upload the video file to the host.
 
-        例如将视频文件crowd.mp4上传到Host侧的“/home/HwHiAiUser/“目录下。
+        For example, upload the video file  **crowd.mp4**  to the  **/home/HwHiAiUser/**  directory on the host.
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >支持H264与H265格式的MP4文件，如果MP4文件需要剪辑，建议使用开源工具ffmpeg，使用其他工具剪辑的视频文件ffmpeg工具可能不支持解析。  
+        >![](public_sys-resources/icon-note.gif) **NOTE:**   
+        >H.264 and H.265 MP4 files are supported. If an MP4 file needs to be edited, you are advised to use FFmpeg. If a video file is edited by other tools, FFmpeg may fail to parse the file.  
 
-    -   如果仅解析RTSP视频流，本步骤可跳过。
+    -   If only RTSP video streams need to be parsed, skip this step.
 
 
-## 运行<a name="section6245151616426"></a>
+## Run<a name="section6245151616426"></a>
 
-1.  运行Crowd Counting程序
+1.  Run the crowd counting application.
 
-    在Mind Studio工具的工具栏中找到Run按钮，点击**Run \> Run 'sample-crowdcounting'**，如[图8](#zh-cn_topic_0219059426_fig12953163061713)所示，可执行程序已经在开发板执行。
+    On the toolbar of Mind Studio, click  **Run**  and choose  **Run \> Run 'sample-crowdcounting'**. As shown in  [Figure 8](#en-us_topic_0219059426_fig12953163061713), the executable application is running on the developer board.
 
-    **图 8**  程序运行示意图<a name="zh-cn_topic_0219059426_fig12953163061713"></a>  
+    **Figure  8**  Application running<a name="en-us_topic_0219059426_fig12953163061713"></a>  
     
 
-    ![](figures/zh-cn_image_0219073392.png)
+    ![](figures/en-us_image_0219073392.png)
 
-2.  使用启动Presenter Server服务时提示的URL登录 Presenter Server 网站，详细可参考[启动Presenter Server](#zh-cn_topic_0219059426_fig129539592222)。
+2.  Use the URL displayed upon the start of the Presenter Server service to log in to Presenter Server. For details, see  [Start Presenter Server](#en-us_topic_0219059426_fig129539592222).
 
-    等待Presenter Agent传输数据给服务端，单击“Refresh”刷新，当有数据时相应的Channel 的Status变成绿色，如[图 Presenter Server界面](#zh-cn_topic_0219059426_fig69382913311)所示
+    Wait for Presenter Agent to transmit data to the server. Click  **Refresh**. When there is data, the icon in the  **Status**  column for the corresponding channel changes to green, as shown in  [Figure 9](#en-us_topic_0219059426_fig69382913311).
 
-    **图 9**  Presenter Server界面<a name="zh-cn_topic_0219059426_fig69382913311"></a>  
-    ![](figures/Presenter-Server界面-31.png "Presenter-Server界面-31")
+    **Figure  9**  Presenter Server page<a name="en-us_topic_0219059426_fig69382913311"></a>  
+    ![](figures/presenter-server-page-29.png "presenter-server-page-29")
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   Crowd Counting的Presenter Server最多支持10路Channel同时显示，每个  _presenter\_view\_app\_name_  对应一路Channel。  
-    >-   由于硬件的限制，每一路支持的最大帧率是20fps，受限于网络带宽的影响，帧率会自动适配为较低的帧率进行展示。  
+    >![](public_sys-resources/icon-note.gif) **NOTE:**   
+    >-   For the crowd counting application, Presenter Server supports a maximum of 10 channels at the same time \(each  _presenter\_view\_app\_name_  parameter corresponds to a channel\).  
+    >-   Due to hardware limitations, each channel supports a maximum frame rate of 20 fps. A lower frame rate is automatically used when the network bandwidth is low.  
 
-3.  单击右侧对应的View Name链接，比如上图的“video”，查看结果。
+3.  Click a link in the  **View Name**  column, for example,  **video**  in the preceding figure, and view the result.
 
-## 后续处理<a name="section1092612277429"></a>
+## Follow-up Operations<a name="section1092612277429"></a>
 
--   **停止Crowd Counting应用**
+-   Stopping the crowd counting application
 
-    Crowd Counting应用执行后会处于持续运行状态，若要停止Crowd Counting应用程序，可执行如下操作。
+    The crowd counting application is running continually after being executed. To stop it, perform the following operation:
 
-    单击停止按钮停止Crowd Counting应用程序。如[图 Crowd Counting应用程序运行结束](#zh-cn_topic_0219059426_fig464152917203)所示应用程序已停止运行
+    Click the stop button to stop the crowd counting application. As shown in  [Figure 10](#en-us_topic_0219059426_fig464152917203), the crowd counting application has stopped running.
 
-    **图 10**  Crowd Counting应用程序运行结束<a name="zh-cn_topic_0219059426_fig464152917203"></a>  
+    **Figure  10**  Stop of the crowd counting application<a name="en-us_topic_0219059426_fig464152917203"></a>  
     
 
-    ![](figures/zh-cn_image_0219075771.png)
+    ![](figures/en-us_image_0219075771.png)
 
--   **停止Presenter Server服务**
+-   **Stopping the Presenter Server service**
 
-    Presenter Server服务启动后会一直处于运行状态，若想停止Crowd Counting应用对应的Presenter Server服务，可执行如下操作。
+    The Presenter Server service is always in running state after being started. To stop the Presenter Server service for the crowd counting application, perform the following operations:
 
-    以Mind Studio安装用户在Mind Studio所在服务器中的命令行中执行如下命令查看Crowd Counting应用对应的Presenter Server服务的进程。
+    On the server with  Mind Studio  installed, run the following command as the  Mind Studio  installation user to check the process of the Presenter Server service corresponding to the crowd counting application:
 
     **ps -ef | grep presenter | grep crowd\_counting**
 
@@ -203,9 +203,9 @@
      ascend    7701  1615  0 14:21 pts/8    00:00:00 python3 presenterserver/presenter_server.py --app crowd_counting
     ```
 
-    如上所示  _7701_  即为crowd\_counting应用对应的Presenter Server服务的进程ID。
+    In the preceding information,  _7701_  indicates the process ID of the Presenter Server service for the crowd counting application.
 
-    若想停止此服务，执行如下命令：
+    To stop the service, run the following command:
 
     **kill -9** _7701_
 
