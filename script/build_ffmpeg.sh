@@ -54,7 +54,7 @@ function download_code()
         fi
     fi
     echo "Download ffmpeg code..."
-    ffmpeg_download_url="https://gitee.com/mirrors/ffmpeg/repository/archive/${ffmpeg_version}?format=tar.gz"
+    ffmpeg_download_url="https://gitee.com/mirrors/ffmpeg/repository/archive/${ffmpeg_version}.tar.gz"
     wget -O ${script_path}/${ffmpeg_version}.ing ${ffmpeg_download_url} --no-check-certificate
     if [[ $? -ne 0 ]];then
         echo "ERROR: download failed, please check ${ffmpeg_download_url} connection."
